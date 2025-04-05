@@ -55,7 +55,7 @@ public class DescriptionListWidget extends EntryListWidget {
 	}
 
 	public boolean isMouseInList(int mouseX, int mouseY) {
-		return mouseY >= this.bottom && mouseY <= this.top && mouseX >= this.left && mouseX <= this.right;
+		return mouseY >= this.top && mouseY <= this.bottom && this.mouseX >= this.left && this.mouseX <= this.right;
 	}
 
 	@Override
@@ -476,7 +476,7 @@ public class DescriptionListWidget extends EntryListWidget {
 		public void render(int index, int x, int y, int width, int height, BufferBuilder bufferBuilder, int mouseX, int mouseY, boolean hovered) {
 			if (updateTextEntry) {
 				UpdateAvailableBadge.renderBadge(x + indent, y);
-				x+=11;
+				x += 11;
 			}
 			textRenderer.drawStringWithShadow(text, x + indent, y, 0xAAAAAA);
 		}

@@ -24,6 +24,7 @@ public class ModListEntry implements EntryListWidget.Entry {
 	public static final ResourceLocation UNKNOWN_ICON = new ResourceLocation(ModMenu.MOD_ID, "textures/misc/unknown_pack.png");
 	private static final ResourceLocation MOD_CONFIGURATION_ICON = new ResourceLocation(ModMenu.MOD_ID, "textures/gui/mod_configuration.png");
 	private static final ResourceLocation ERROR_ICON = new ResourceLocation(ModMenu.MOD_ID, "textures/gui/world_selection.png");
+//	private static final ResourceLocation ERROR_HIGHLIGHTED_ICON = ResourceLocation("world_list/error_highlighted");
 
 	protected final Minecraft client;
 	public final Mod mod;

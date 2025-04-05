@@ -9,17 +9,18 @@ import net.minecraft.KeyBinding;
 import org.lwjgl.input.Keyboard;
 
 public class ModMenuEventHandler {
-	private static KeyBinding MENU_KEY_BIND;
+	public static ModMenuEventHandler instance;
+	public static KeyBinding MENU_KEY_BIND;
 
-//	public static void register() {
-//		KeyBindingEvents.REGISTER_KEYBINDS.register(registry -> MENU_KEY_BIND = registry.register(
-//				"key.modmenu.open_menu",
-//				Keyboard.KEY_NONE
-//		));
-//		MinecraftClientEvents.TICK_END.register(ModMenuEventHandler::onClientEndTick);
-//	}
+	public ModMenuEventHandler() {
+		instance = this;
+	}
 
-	private static void onClientEndTick(Minecraft client) {
+	public static void register() {
+		MENU_KEY_BIND = new KeyBinding("key.modmenu.open_menu", Keyboard.KEY_NONE);
+	}
+
+	public static void onClientEndTick(Minecraft client) {
 		while (MENU_KEY_BIND.isPressed()) {
 			client.displayGuiScreen(new ModsScreen(client.currentScreen));
 		}

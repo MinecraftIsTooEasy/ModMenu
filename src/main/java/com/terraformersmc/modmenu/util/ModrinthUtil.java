@@ -13,7 +13,7 @@
 //import com.terraformersmc.modmenu.config.ModMenuConfig;
 //import com.terraformersmc.modmenu.util.mod.Mod;
 //import com.terraformersmc.modmenu.util.mod.ModrinthData;
-//import net.fabricmc.loader.api.FabricLoader;
+//import net.xiaoyu233.fml.FishModLoader;
 //import org.apache.http.HttpResponse;
 //import org.apache.http.client.HttpClient;
 //import org.apache.http.client.methods.HttpUriRequest;
@@ -60,12 +60,14 @@
 //			});
 //
 //			String environment = ModMenu.devEnvironment ? "/development" : "";
-//			String primaryLoader = ModMenu.runningQuilt ? "quilt" : "fabric";
-//			List<String> loaders = ModMenu.runningQuilt ? Arrays.asList("fabric", "quilt") : Collections.singletonList("fabric");
+////			String primaryLoader = ModMenu.runningQuilt ? "quilt" : "fabric";
+//			String primaryLoader = "fish";
+////			List<String> loaders = ModMenu.runningQuilt ? Arrays.asList("fabric", "quilt") : Collections.singletonList("fabric");
+//			List<String> loaders = Collections.singletonList("fabric");
 //
-//			String mcVer = FabricLoader.getInstance().getModContainer("minecraft").get()
+//			String mcVer = FishModLoader.getModContainer("minecraft").get()
 //				.getMetadata().getVersion().getFriendlyString();
-//			String[] splitVersion = FabricLoader.getInstance().getModContainer(ModMenu.MOD_ID)
+//			String[] splitVersion = FishModLoader.getModContainer(ModMenu.MOD_ID)
 //				.get().getMetadata().getVersion().getFriendlyString().split("\\+", 1); // Strip build metadata for privacy
 //			final String modMenuVersion = splitVersion.length > 1 ? splitVersion[1] : splitVersion[0];
 //			final String userAgent = String.format("%s/%s (%s/%s%s)", ModMenu.GITHUB_REF, modMenuVersion, mcVer, primaryLoader, environment);

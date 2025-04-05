@@ -21,7 +21,7 @@ repositories {
 loom {
 	accessWidenerPath = file("src/main/resources/modmenu.accesswidener")
 	mergedMinecraftJar()
-	setFML(new File("F:\\Projects\\IDEA\\Minecraft\\MITE\\FML3\\FishModLoader-v3.4.1.jar"))
+	setFML(new File("D:\\Projects\\IDEA\\Minecraft\\MITE\\FishModLoader-v3.4.1.jar"))
 	mods {
 		"Bread Skin" {
 			sourceSet sourceSets.main
@@ -37,8 +37,7 @@ runClient{
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.fmlMCPMappings()
-//	implementation("org.spongepowered:mixin:0.8.5")
-
+	implementation("com.google.code.gson:gson:2.11.0")
 	implementation files(loom.getFML().toPath())
 }
 

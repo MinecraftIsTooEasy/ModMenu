@@ -17,7 +17,17 @@ public class ChildEntry extends ModListEntry {
 	}
 
 	@Override
-	public void render(int index, int x, int y, int rowWidth, int rowHeight, BufferBuilder bufferBuilder, int mouseX, int mouseY, boolean hovered) {
+	public void render(
+		int index,
+		int x,
+		int y,
+		int rowWidth,
+		int rowHeight,
+		BufferBuilder bufferBuilder,
+		int mouseX,
+		int mouseY,
+		boolean hovered
+	) {
 		super.render(index, x, y, rowWidth, rowHeight, bufferBuilder, mouseX, mouseY, hovered);
 		x += 4;
 		int color = 0xFFA0A0A0;
