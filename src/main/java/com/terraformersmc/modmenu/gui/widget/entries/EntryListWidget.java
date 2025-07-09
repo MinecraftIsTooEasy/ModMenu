@@ -130,7 +130,7 @@ public abstract class EntryListWidget extends GuiSlot {
 			this.func_77222_a(n5, n4, bufferBuilder);
 		}
 		this.renderList(n5, n4, mouseX, mouseY);
-		GL11.glDisable(2929);
+		GL11.glDisable(GL11.GL_DEPTH_TEST);
 		n3 = 4;
 		this.renderHoleBackground(0, this.top, 255, 255);
 		this.renderHoleBackground(this.bottom, this.height, 255, 255);

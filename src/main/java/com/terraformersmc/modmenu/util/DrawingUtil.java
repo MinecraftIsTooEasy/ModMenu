@@ -47,7 +47,7 @@ public class DrawingUtil {
 				int width = CLIENT.fontRenderer.getStringWidth(renderable);
 				x1 += (float) (wrapWidth - width);
 			}
-			CLIENT.fontRenderer.drawString(renderable, x1, y + i * CLIENT.fontRenderer.FONT_HEIGHT, color);
+			CLIENT.fontRenderer.drawStringWithShadow(renderable, x1, y + i * CLIENT.fontRenderer.FONT_HEIGHT, color);
 		}
 	}
 

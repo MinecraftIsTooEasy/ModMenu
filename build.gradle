@@ -23,7 +23,7 @@ loom {
 	mergedMinecraftJar()
 	setFML(new File("D:\\Projects\\IDEA\\Minecraft\\MITE\\FishModLoader-v3.4.1.jar"))
 	mods {
-		"Bread Skin" {
+		"ModMenu" {
 			sourceSet sourceSets.main
 		}
 	}
@@ -37,6 +37,7 @@ runClient{
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.fmlMCPMappings()
+	implementation("it.unimi.dsi:fastutil:8.5.12")
 	implementation("com.google.code.gson:gson:2.11.0")
 	implementation files(loom.getFML().toPath())
 }
